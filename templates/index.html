@@ -156,6 +156,21 @@
         button:hover {
             background-color: rgb(187, 210, 228);
         }
+
+        h2.blink {
+            font-size: medium; 
+            position: absolute; 
+            top: 82.5%; 
+            left: 40%;
+            animation: blinker 1.5s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
     </style>
 </head>
 
@@ -185,7 +200,7 @@
             </form>
             <br>
             <br>
-            <h2 style="font-size: medium; position: absolute; top: 82.5%; left: 25%;">{{prediction_text}}</h2>
+            <h2 class="blink">{{prediction_text}}</h2>
         </div>
     </div>
 </body>
